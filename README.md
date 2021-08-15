@@ -17,6 +17,9 @@ It's snake... but in the windows console... and it shrinks... that's it...
 > - An ESP32
 > - [The ESP32 EEPROM uploader tool](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases)
 > - A 16 led adafruit neopixel ring
+> - Adafruit NeoPixel /!\ THE ONE CALLED "Adafruit NeoPixel", IT MIGHT NOT BE FIRST IN LIBRARY MANAGER
+> - [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)
+You'll need to go in Tools > ESP32 Sketch Data Upload
 
 Creates an access point called Epic with passypoop as password and a website on it's ip address (says in the serial).
 
