@@ -39,7 +39,7 @@ void setup() {
     for (size_t i = 0; i < len; i++) {
       msg = msg + (char)data[i];
     }
-    String sa[16];
+    String sa[17];
     int r = 0, t = 0;
     Serial.println(msg);
     for (int i = 0; i < msg.length(); i++)
@@ -51,16 +51,15 @@ void setup() {
         t++;
       }
     }
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < 17; i++)
     {
       sa[i] = sa[i] + ",";
-      Serial.println(sa[i]);
     }
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < 17; i++)
     {
       r = 0;
       t = 0;
-      int nums[3];
+      int nums[4];
       for (int ii = 0; ii < sa[i].length(); ii++)
       {
         if (sa[i].charAt(ii) == ',')
@@ -70,12 +69,8 @@ void setup() {
           t++;
         }
       }
-      Serial.print(i);
-            Serial.println(".");
-      Serial.println(nums[0]);
-      Serial.println(nums[1]);
-      Serial.println(nums[2]);
       pixels.setPixelColor(i, pixels.Color(nums[0], nums[1], nums[2]));
+      pixels.setBrightness(nums[3]);-
     }
      pixels.show();
     request->send(200);
