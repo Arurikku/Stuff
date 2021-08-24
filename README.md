@@ -1,5 +1,5 @@
 # Stuff
-Stuff i made
+Some stuff
 
 ## findString
 
